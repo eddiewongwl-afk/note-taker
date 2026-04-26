@@ -21,8 +21,8 @@ export function Input({ className, label, error, ...props }: InputProps) {
           background: 'var(--color-canvas)',
           border: '1px solid var(--color-border)',
           color: 'var(--color-ink-primary)',
-          placeholder: 'var(--color-ink-tertiary)',
         }}
+        placeholder={props.placeholder || ''}
         {...props}
       />
       {error && <p className="text-xs" style={{ color: 'var(--color-danger)' }}>{error}</p>}
